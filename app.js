@@ -8,7 +8,8 @@ app.get("/", async (req,res)=>{
     try{
         const url = "http://mma-funcapp.azurewebsites.net";
         const response = await.axios.get(url);
-        res.send(`${response.data}`);
+        res.status(200).send(`${response.data}`);
+        console.log("Success!")
     }
     catch(error){
         res.status(500).send(`${error.message}`)
