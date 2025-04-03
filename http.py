@@ -6,7 +6,7 @@ app = flask (__name__)
 
 @app.route('/')
 def consumeApi():
-    url = 
+    url = "https://mma-funcapp.azurewebsites.net"
     response = requests.get(url)
     return f"Response: {response.text}"
 
