@@ -6,7 +6,7 @@ const port = process.env.PORT | 3000;
 
 app.get("/", async (req,res)=>{
     try{
-        const url = "http://mma-funcapp.azurewebsites.net";
+        const url = "https://pokeapi.co/api/v2/pokemon/ditto";
         const response = await.axios.get(url);
         res.status(200).send(`${response.data}`);
         console.log("Success!")
